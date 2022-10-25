@@ -16,7 +16,7 @@ I use [fastify-benchmarks](https://github.com/fastify/benchmarks) and i add [uNe
 
 * __Machine:__ win32 x64 | 12 vCPUs | 15.9GB Mem
 * __Node:__ `v18.11.0`
-* __Run:__ Tue Oct 25 2022 14:32:15 GMT+0200 (heure d’été d’Europe centrale)
+* __Run:__ Tue Oct 25 2022 14:40:12 GMT+0200 (heure d’été d’Europe centrale)
 * __Method:__ `autocannon -c 100 -d 40 -p 10 localhost:3000` (two rounds; one to warm-up, one to measure)
 
 |             | Version | Router | Requests/s | Latency | Throughput/Mb |
