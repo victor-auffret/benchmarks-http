@@ -96,7 +96,7 @@ function compareResults (markdown) {
 
   const table = new Table({
     ...tableStyle,
-    head: ['', 'Version', 'Router', 'Requests/s', 'Latency', 'Throughput/Mb']
+    head: ['', 'Version', 'Router', 'Requests/s', 'Latency (ms)', 'Throughput/Mb']
   })
 
   if (markdown) {
