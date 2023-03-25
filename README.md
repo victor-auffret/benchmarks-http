@@ -15,18 +15,18 @@ I use [fastify-benchmarks](https://github.com/fastify/benchmarks) and i add [uNe
 # Benchmarks
 
 * __Machine:__ win32 x64 | 12 vCPUs | 15.9GB Mem
-* __Node:__ `v18.11.0`
-* __Run:__ Tue Oct 25 2022 14:49:00 GMT+0200 (heure d’été d’Europe centrale)
-* __Method:__ `autocannon -c 100 -d 40 -p 10 localhost:3000` (two rounds; one to warm-up, one to measure)
+* __Node:__ `v19.8.1`
+* __Run:__ Sat Mar 25 2023 20:06:59 GMT+0100 (heure normale d’Europe centrale)
+* __Method:__ `autocannon -c 50 -d 20 -p 5 localhost:3000` (two rounds; one to warm-up, one to measure)
 
 |             | Version | Router | Requests/s | Latency (ms) | Throughput/Mb |
 | :--         | --:     | --:    | :-:        | --:          | --:           |
-| uWebSockets | 20.14.0 | ✗      | 61956.8    | 3.36         | 7.09          |
-| polkadot    | 1.0.0   | ✗      | 53148.8    | 4.27         | 9.48          |
-| fastify     | 4.9.2   | ✓      | 50633.6    | 4.47         | 9.08          |
-| 0http       | 3.4.1   | ✓      | 48483.2    | 4.74         | 8.65          |
-| vanilla     | 1.0.0   | ✗      | 48150.4    | 4.59         | 8.77          |
-| rayo        | 1.3.10  | ✓      | 47966.4    | 4.73         | 8.55          |
-| polka       | 0.5.2   | ✓      | 47660.8    | 4.77         | 8.50          |
-| pure-http   | 3.3.1   | ✗      | 15702.4    | 15.37        | 3.43          |
-| express     | 4.18.2  | ✓      | 11711.2    | 20.86        | 2.09          |
+| uWebSockets | 20.14.0 | ✗      | 66068.8    | 3.36         | 9.89          |
+| polkadot    | 1.0.0   | ✗      | 50974.4    | 4.37         | 9.09          |
+| fastify     | 4.9.2   | ✓      | 48584.0    | 4.68         | 8.71          |
+| vanilla     | 1.0.0   | ✗      | 47585.6    | 4.74         | 8.67          |
+| rayo        | 1.3.10  | ✓      | 46161.6    | 4.95         | 8.23          |
+| 0http       | 3.4.1   | ✓      | 46140.8    | 5.07         | 8.23          |
+| polka       | 0.5.2   | ✓      | 45688.0    | 5.01         | 8.15          |
+| pure-http   | 3.3.1   | ✗      | 15396.0    | 15.71        | 3.36          |
+| express     | 4.18.2  | ✓      | 11106.0    | 22.03        | 1.98          |
