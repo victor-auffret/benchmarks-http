@@ -1,6 +1,6 @@
 {
   "name": "benchmarks-http",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Benchmarks http server (fastify, uWebSocketsJS, express, ...)",
   "main": "index.js",
   "scripts": {
@@ -19,26 +19,26 @@
   "author": "benevolar",
   "license": "MIT",
   "dependencies": {
-    "0http": "^3.5.1",
-    "autocannon": "^7.10.0",
+    "0http": "^3.5.2",
+    "autocannon": "^7.11.0",
     "autocannon-compare": "^0.4.0",
     "benchmark": "^2.1.4",
     "chalk": "^5.2.0",
     "cli-table3": "^0.6.3",
-    "commander": "^10.0.0",
+    "commander": "^10.0.1",
     "connect": "^3.7.0",
     "cors": "^2.8.5",
     "dns-prefetch-control": "^0.3.0",
     "esm": "^3.2.25",
     "express": "^4.18.2",
-    "fastify": "^4.15.0",
-    "inquirer": "^9.1.5",
-    "ora": "^6.3.0",
+    "fastify": "^4.18.0",
+    "inquirer": "^9.2.7",
+    "ora": "^6.3.1",
     "polka": "^0.5.2",
     "polkadot": "^1.0.0",
-    "pure-http": "^3.3.1",
+    "pure-http": "^3.3.2",
     "rayo": "^1.4.0",
-    "uWebSockets.js": "github:uNetworking/uWebSockets.js#v20.20.0"
+    "uWebSockets.js": "github:uNetworking/uWebSockets.js#v20.30.0"
   },
   "bugs": {
     "url": "https://github.com/victor-auffret/benchmarks-http/issues"
