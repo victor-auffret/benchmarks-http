@@ -26,9 +26,26 @@ for (let i = 0; i < routes; ++i) {
 }
 
 const loadingTime = process.hrtime(start)
+
+const go = async () => {
+  try {
+    await server.listen({ port: 3000 }, () => {
+      const listenTime = process.hrtime(start)
+      const path = require('path')
+      require('fs').writeFileSync(path.join(__dirname, `${routes}-${path.basename(__filename)}.txt`), `${loadingTime} | ${listenTime}\n`, { encoding: 'utf-8', flag: 'a' })
+      server.close()
+    })
+  } catch (err) {
+    server.log.error(err)
+    process.exit(1)
+  }
+}
+go()
+/*
 server.listen(0, () => {
   const listenTime = process.hrtime(start)
   const path = require('path')
   require('fs').writeFileSync(path.join(__dirname, `${routes}-${path.basename(__filename)}.txt`), `${loadingTime} | ${listenTime}\n`, { encoding: 'utf-8', flag: 'a' })
   server.close()
 })
+*/

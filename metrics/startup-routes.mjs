@@ -18,6 +18,25 @@ for (let i = 0; i < routes; ++i) {
 }
 const loadingTime = process.hrtime(start)
 
+const go = async () => {
+  try {
+    await server.listen({ port: 3000 }, () => {
+      const listenTime = process.hrtime(start)
+      const { basename, join } = require('path')
+      const { writeFileSync } = require('fs')
+      writeFileSync(
+        join(`${globalThis.__dirname}`, `${routes}-${basename(`${globalThis.__filename}`)}.txt`),
+        `${loadingTime} | ${listenTime}\n`,
+        { encoding: 'utf-8', flag: 'a' })
+      server.close()
+    })
+  } catch (err) {
+    server.log.error(err)
+    process.exit(1)
+  }
+}
+go()
+/*
 server.listen(0, () => {
   const listenTime = process.hrtime(start)
   const { basename, join } = require('path')
@@ -28,3 +47,4 @@ server.listen(0, () => {
     { encoding: 'utf-8', flag: 'a' })
   server.close()
 })
+*/
