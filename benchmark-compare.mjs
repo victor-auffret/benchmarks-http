@@ -10,7 +10,7 @@ import inquirer from 'inquirer'
 const require = createRequire(import.meta.url)
 
 const os = require('os')
-const commander = require('commander')
+const { program } = require('commander')
 // const inquirer = require('inquirer')
 
 const Table = require('cli-table3')
@@ -19,13 +19,15 @@ const { readdirSync, readFileSync, writeFileSync } = require('fs')
 
 const resultsPath = join(process.cwd(), 'results')
 
-commander
+program
   .option('-t, --table', 'print table')
   .option('-m --markdown', 'format table for markdown')
   .option('-u --update', 'update README.md')
-  .parse(process.argv)
+  //.argument(process.argv)
 
-const opts = commander.opts()
+program.parse();
+
+const opts = program.opts()
 
 if (opts.markdown || opts.update) {
   chalk.level = 0

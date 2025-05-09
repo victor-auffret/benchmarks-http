@@ -1,13 +1,14 @@
 {
   "name": "benchmarks-http",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Benchmarks http server (fastify, uWebSocketsJS, express, ...)",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-	  "help": "node benchmark.mjs compare -h",
-	  "start": "node benchmark.mjs",
-	  "table": "node benchmark.mjs compare -t",
-	  "maj": "node benchmark.mjs compare -u"
+    "help": "bun benchmark.mjs compare -h",
+    "start": "bun benchmark.mjs",
+    "table": "bun benchmark.mjs compare -t",
+    "maj": "bun benchmark.mjs compare -u"
   },
   "bin": {
     "benchmark": "benchmark.mjs"
@@ -19,26 +20,30 @@
   "author": "benevolar",
   "license": "MIT",
   "dependencies": {
-    "0http": "^3.5.2",
-    "autocannon": "^7.14.0",
+    "0http": "^4.2.0",
+    "@types/express": "^5.0.1",
+    "@types/polka": "^0.5.7",
+    "autocannon": "^8.0.0",
     "autocannon-compare": "^0.4.0",
     "benchmark": "^2.1.4",
-    "chalk": "^5.3.0",
-    "cli-table3": "^0.6.3",
-    "commander": "^11.1.0",
+    "bun": "^1.2.12",
+    "chalk": "^5.4.1",
+    "cli-table3": "^0.6.5",
+    "commander": "^13.1.0",
     "connect": "^3.7.0",
     "cors": "^2.8.5",
     "dns-prefetch-control": "^0.3.0",
     "esm": "^3.2.25",
-    "express": "^4.18.2",
-    "fastify": "^4.25.2",
-    "inquirer": "^9.2.12",
-    "ora": "^8.0.1",
+    "express": "5.1.0",
+    "fastify": "^5.3.2",
+    "hono": "^4.7.9",
+    "inquirer": "^12.6.0",
+    "ora": "^8.2.0",
     "polka": "^0.5.2",
     "polkadot": "^1.0.0",
-    "pure-http": "^3.3.4",
+    "pure-http": "^4.0.2",
     "rayo": "^1.4.6",
-    "uWebSockets.js": "github:uNetworking/uWebSockets.js#v20.41.0"
+    "uWebSockets.js": "github:uNetworking/uWebSockets.js#v20.52.0"
   },
   "bugs": {
     "url": "https://github.com/victor-auffret/benchmarks-http/issues"

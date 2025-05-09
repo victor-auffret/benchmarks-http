@@ -1,5 +1,6 @@
 'use strict'
 import express from 'express'
+
 express()
   .disable('etag')
   .disable('x-powered-by')
